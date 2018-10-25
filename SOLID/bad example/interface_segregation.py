@@ -1,13 +1,12 @@
 '''
+Many client-specific interfaces are better than one general-purpose interface.
+
 This interface is bad because it includes too many methods.
 And what if our product class cannot have discounts or promo codes,
 or it does not make sense for it to establish the material from which it was made (for example, for books).
 Thus, in order not to implement in each class methods that are not used in it,
 better break the interface into several smaller ones and
 implement specific interfaces with each specific class
-
-
-many client-specific interfaces are better than one general-purpose interface
 '''
 class IItem(object):
 

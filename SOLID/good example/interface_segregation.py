@@ -1,11 +1,10 @@
 '''
+Many client-specific interfaces are better than one general-purpose interface.
+
 Many specialized interfaces are better than one universal.
 Adherence to this principle is necessary in order for client classes
 the using / implementing interface knew only about the methods they use,
 which leads to a decrease in the amount of unused code.
-
-
-many client-specific interfaces are better than one general-purpose interface
 '''
 class IItem(object):
 

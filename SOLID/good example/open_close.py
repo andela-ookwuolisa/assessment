@@ -1,14 +1,17 @@
-'''
-We add a Shape abstract class
-Now the ShapePrinter class remains intact when we add a new shape type.
-The existing code is not modified.
-'''
+from shape import IShape
 
-class Shape:
-    def draw(self):
-        #draw shape
+class Rectangle(IShape):
+    '''
+    Software entities (classes, modules, functions, etc)
+    should be open for extension, but closed for 
+    modification.
 
-class Rectangle(Shape):
+    We add a Shape abstract class
+    Now the ShapePrinter class remains intact when 
+    we add a new shape type.
+    The existing code is not modified.
+    '''
+    
     def __init__(self, width,height)
         self.width = width
         self.height = height
@@ -16,7 +19,7 @@ class Rectangle(Shape):
     def draw(self):
         #draw shape
 
-class Square(Shape):
+class Square(IShape):
     def __init__(self, size)
         self.size = size
 
@@ -24,6 +27,5 @@ class Square(Shape):
         #draw shape
 
 class ShapePrinter:
- 
     def drawShape(self, shape):
         shape.draw()

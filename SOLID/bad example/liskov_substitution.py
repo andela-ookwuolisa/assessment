@@ -1,4 +1,8 @@
 '''
+Objects in a program should be replaceable with instances of their 
+base types without altering the correctness of that program.
+I.e, subclass should be replaceable with its parent class
+
 The violation of LSP here is that a `Prisoner` is not a suitable
 substitution of `Person` since they "behave" differently.
 Remember, the principle is that you should model your class according
@@ -7,7 +11,6 @@ to their behavior rather than properties.
 import copy
 
 class Person(object):
-
     def __init__(self, position):
         self.position = position
 

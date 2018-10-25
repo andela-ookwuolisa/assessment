@@ -1,4 +1,7 @@
 """
+The Single Responsibility Principle requires that each class is 
+responsible for only one thing.
+
 Each class should solve one concrete task! No more, no less.
 """
 

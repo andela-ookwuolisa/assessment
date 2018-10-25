@@ -1,9 +1,12 @@
+"""
+The Single Responsibility Principle requires that each class
+ is responsible for only one thing.
+
+This class solves 3 different tasks: work with db,
+work with items, items displaying. It should be separated
+to 3 different classes.
+"""
 class Order:
-    """
-    This class solve 3 different tasks: work with db,
-    work with items, items displaying. It should be separated
-    to 3 different classes.
-    """
     def get_item(self):
         pass
     def set_item(self):

@@ -1,4 +1,8 @@
 '''
+Objects in a program should be replaceable with instances of their 
+base types without altering the correctness of that program.
+I.e, subclass should be replaceable with its parent class
+
 As we can see in the bad example, where a violation
 of LSP may lead to an unexpected behaviour of sub-types. In our 
 example, "is-a" relation can not directly applied to `Person` and 
@@ -6,7 +10,6 @@ example, "is-a" relation can not directly applied to `Person` and
 How to fix it? Maybe a better naming will do the trick:
 '''
 class FreeMan(object):
-
     def __init__(self, position):
         self.position = position
 
@@ -24,7 +27,6 @@ class Prisoner(object):
         self.position = type(self).PRISON_LOCATION
 
 def main():
-
     prisoner = Prisoner()
     print "The prisoner trying to walk to north by 10 and east by -3."
     

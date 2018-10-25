@@ -1,4 +1,7 @@
 '''
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+Abstractions should not depend on details. Details should depend on abstractions.
+
 Dependencies within the system are based on abstractions.
 Top level modules are independent of lower level modules.
 Abstractions should not depend on the details. Details must depend on abstractions.
@@ -13,12 +16,10 @@ class Customer:
 
 
 class IOrderProcessor:
-
     def checkout(self, order):
         pass
 
 class OrderProcessor(IOrderProcessor):
-
     def checkout(self, order):
         "Do some cool stuff"
         pass

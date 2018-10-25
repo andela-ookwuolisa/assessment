@@ -1,7 +1,14 @@
 '''
-We can see that every time we want to draw a distinct shape we will have to modify the drawShape method of the ShapePrinter to accept a new shape.
+Software entities (classes, modules, functions, etc)
+should be open for extension, but closed for 
+modification.
 
-As new types of shapes come to draw, the ShapePrinter class will be more confusing and fragile to changes.
+We can see that every time we want to draw a distinct shape we 
+will have to modify the drawShape method of the ShapePrinter 
+to accept a new shape.
+
+As new types of shapes come to draw, the ShapePrinter class 
+will be more confusing and fragile to changes.
 '''
 
 
@@ -15,9 +22,7 @@ class Square:
         self.size = size
 
 class ShapePrinter:
- 
     def drawShape(self, shape):
- 
         if isinstance(shape, Rectangle):
             #Draw Rectangle...
          elif isinstance(shape, Square): 

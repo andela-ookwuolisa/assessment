@@ -12,10 +12,10 @@ for(start to end of array)
 '''
 
 def linear_search(arr, m):
-  for index, element in enumerate(arr):
-    if element == m:
-      return index
-  return -1
+    for index, element in enumerate(arr):
+        if element == m:
+            return index
+    return -1
 
 list_1 = list(range(15))
 list_2 = list (range(0,30,2))

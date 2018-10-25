@@ -1,21 +1,21 @@
 from collections import defaultdict 
 
 class Graph():
-  def __init__(self):
-    self.graph = defaultdict(list)
-    self.edges = list()
+	def __init__(self):
+		self.graph = defaultdict(list)
+		self.edges = list()
 
-  def addEdge(self,u,v):
-    self.graph[u].append(v) 
+	def addEdge(self,u,v):
+		self.graph[u].append(v) 
 
-  def generate_edges(self):
-      for node in self.graph:
-          for neighbour in self.graph[node]:
-              self.edges.append((node, neighbour))
-      return self.edges
+	def generate_edges(self):
+		for node in self.graph:
+			for neighbour in self.graph[node]:
+				self.edges.append((node, neighbour))
+		return self.edges
 
-  def generate_vertices(self):
-    return list(self.graph.keys())
+	def generate_vertices(self):
+		return list(self.graph.keys())
 
   
 graph = Graph()
