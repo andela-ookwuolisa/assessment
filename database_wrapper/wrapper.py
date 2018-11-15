@@ -31,18 +31,6 @@ class BaseDB(IBaseDB):
 
         return ', '.join(str_list)
 
-    
-    # @classmethod
-    # def _tuple_to_key_val(cls, tup):
-    #     str_list = []
-    #     set_str =""
-
-    #     for i, item in enumerate(tup._fields):
-    #         str_values = str(item) + "=" + str(tup[i])
-    #         str_list.append(str_values)
-
-        # return ', '.join(str_list)
-
     def read(self, table_name, query_data=None, filters=None):
         filter_string = self._obj_to_filters(filters)
         query = 'SELECT * FROM "{}" {}'.format(table_name, filter_string)
@@ -52,17 +40,17 @@ class BaseDB(IBaseDB):
 
         return query
 
-        with self.conn.cursor() as cursor: 
-            cursor.execute(query)
-            return cursor.fetchall()
+        # with self.conn.cursor() as cursor: 
+        #     cursor.execute(query)
+        #     return cursor.fetchall()
 
     def create(self, table_name, query_data):
         set_string = self._tuple_to_str(query_data)
         query = 'CREATE TABLE "{}" ({});'.format(table_name, set_string)
         return query
 
-        with self.conn.cursor() as cursor: 
-            cursor.execute(query)
+        # with self.conn.cursor() as cursor: 
+        #     cursor.execute(query)
 
     def update(self, table_name, query_data, filters=None):
         filter_string = self._obj_to_filters(filters)
@@ -71,16 +59,16 @@ class BaseDB(IBaseDB):
                 filter_string)
         return query
 
-        with self.conn.cursor() as cursor: 
-            cursor.execute(query)
+        # with self.conn.cursor() as cursor: 
+        #     cursor.execute(query)
     
     def delete(self, table_name, filters):
         filter_string = self._obj_to_filters(filters)
         query = 'DELETE FROM "{}" {}'.format(table_name, filter_string)
         return query
 
-        with self.conn.cursor() as cursor: 
-            cursor.execute(query)
+        # with self.conn.cursor() as cursor: 
+        #     cursor.execute(query)
     
 
 

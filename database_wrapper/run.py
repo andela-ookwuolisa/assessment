@@ -20,8 +20,9 @@ print(result2)
 
 #update
 query3 = namedtuple('query3', ['name', 'price'])
+filters3 = {'firstName':'royce', 'lastName':'jake' }
 db_query3 = query3('Benz', '5000')
-result3 =  wrapper.update('Cars',db_query3)
+result3 =  wrapper.update('Cars',db_query3, filters3)
 print(result3)
 
 #delete
