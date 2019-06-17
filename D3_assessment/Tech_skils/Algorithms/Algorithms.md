@@ -46,7 +46,7 @@ Space complexity: O(1)
 [Heap sort implementation](heap_sort.py)
 
 ### Merge sort
-Merge sort is an efficient sorting algorithm that uses Divide-and-conquer approach to order elements in a list. This algorithm operates by breaking down large problems into smaller, more easily solvable promblems. The idea of Merge sort is to dived the list in half, and over again until each piece is only one item long. Then those items are merged in sored order.
+Merge sort is an efficient sorting algorithm that uses Divide-and-conquer approach to order elements in a list. This algorithm operates by breaking down large problems into smaller, more easily solvable promblems. The idea of Merge sort is to divide the list in half, and over again until each piece is only one item long. Then those items are merged in sored order.
 
 The implematation follows three basic step: divide, conquer, combine.
 
@@ -56,8 +56,8 @@ Space complexity: O(n)
 [Merge sort implementation](merge_sort.py)
 
 ### Insertion sort
-Insertion sort is a simple algorithm that bulds a final sorted array one element at a time. It works the way we sort a pack of cards. We sort the first two cards and then place the third card in the appropriate position within the first two, and then the fourth is position within the first three and so on until the cards are sorted. 
-During an iteration, an element of a list is inserted into the sorted portion of the list t its left, So basically, forech iteratio, we have an array of other elements yet to be soreted to the right.
+Insertion sort is a simple algorithm that builds a final sorted array one element at a time. It works the way we sort a pack of cards. We sort the first two cards and then place the third card in the appropriate position within the first two, and then the fourth is position within the first three and so on until the cards are sorted. 
+During an iteration, an element of a list is inserted into the sorted portion of the list to its left, So basically, foreach iteration, we have an array of other elements yet to be soreted to the right.
 
 Time complexity: O(n**2)
 Space complexity: O(1)
@@ -78,10 +78,10 @@ Hashing can be used for:
 - The hash key is fully determined by the data input
 - The hash function generates very different keys for similar data
 - It should be simple to compute.
-- There should be less collisions in the has table
+- There should be less collisions in the hash table
 
 ### Message Digest 5 (MD5)
-Am MD5 is created by taking a string of any length and encoding it into a string of 128 bit. Encoding the same string using MD5 will always return the same hash key. It was commonly used when storing password, credit card digits and other sensitive data. But not any longer. It has since been found that MD5 is vulnerable and can be cracked by PCs of this generation. Files with MD5 hash can now be tampered with and still produce thesame MD5 hash. It is no longer suitable for use,  except for non-cryptographic purposes. OMore sucure hash algorithms are SHA2 and SHA3.
+An MD5 is created by taking a string of any length and encoding it into a string of 128 bit. Encoding the same string using MD5 will always return the same hash key. It was commonly used when storing password, credit card digits and other sensitive data. But not any longer. It has since been found that MD5 is vulnerable and can be cracked by PCs of this generation. Files with MD5 hash can now be tampered with and still produce thesame MD5 hash. It is no longer suitable for use,  except for non-cryptographic purposes. More sucure hash algorithms are SHA2 and SHA3.
 
 ### Collision
 It is a situation in which a hash fucntion returns the same hash key for more than one record.

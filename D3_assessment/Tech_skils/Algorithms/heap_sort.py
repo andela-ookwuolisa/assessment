@@ -27,3 +27,4 @@ def heapify(lst, index, heap_size):
         heapify(lst, largest_index, heap_size)
 
 print(heap_sort([8,3,5,2,4]))
+

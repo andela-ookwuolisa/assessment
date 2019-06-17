@@ -12,4 +12,4 @@ Object-oriented programming paradigm comes to play from the planning phase of a 
 - Abstraction: Abstraction allows programmers to write code that shows the essential features of a piece of software without including the background details.
 - Polymorphism: polymorphism refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes. For example, given a base class shape, polymorphism enables the programmer to define different area methods for any number of derived classes, such as circles, rectangles and triangles. No matter what shape an object is, applying the area method to it will return the correct results.
 
-
+[SOLID Principles](https://github.com/andela-ookwuolisa/assessment/tree/master/D2_assessment/SOLID)

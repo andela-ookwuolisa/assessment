@@ -7,3 +7,4 @@ def insertion_sort(lst):
 
 nums = [7,2,5,1,29,6,4,19,11]
 print(insertion_sort(nums))
+
