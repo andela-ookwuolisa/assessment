@@ -1,8 +1,9 @@
 from psycopg2  import connect, Error
 from wrapper import BaseDB
 from collections import namedtuple
+import config
 
-conn = connect("dbname='doc-mgt-db' user='andeladeveloper' host='localhost' password=''")
+conn = connect(f"dbname={config.DB_NAME} user={config.USER} host={config.HOST} password={config.PASSWORD}")
 
 wrapper = BaseDB(conn)
 
@@ -18,7 +19,7 @@ db_query2 = query2('VARCHAR(30) NOT NULL', 'int')
 result2 =  wrapper.create('Cars',db_query2)
 print(result2)
 
-#update
+# #update
 query3 = namedtuple('query3', ['name', 'price'])
 filters3 = {'firstName':'royce', 'lastName':'jake' }
 db_query3 = query3('Benz', '5000')

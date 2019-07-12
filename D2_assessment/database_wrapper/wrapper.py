@@ -15,7 +15,7 @@ class BaseDB(IBaseDB):
                 filter_key_values = '"'+str(key) +'"'+ "='" + str(value) + "'"
                 filter_list.append(filter_key_values)
 
-                 filter_string = " WHERE " + " AND ".join(filter_list)
+                filter_string = " WHERE " + " AND ".join(filter_list)
 
         return filter_string
 
@@ -40,9 +40,9 @@ class BaseDB(IBaseDB):
 
         return query
 
-        # with self.conn.cursor() as cursor: 
-        #     cursor.execute(query)
-        #     return cursor.fetchall()
+        with self.conn.cursor() as cursor: 
+            cursor.execute(query)
+            return cursor.fetchall()
 
     def create(self, table_name, query_data):
         set_string = self._tuple_to_str(query_data)
@@ -50,8 +50,8 @@ class BaseDB(IBaseDB):
 
         return query
 
-        # with self.conn.cursor() as cursor: 
-        #     cursor.execute(query)
+        with self.conn.cursor() as cursor: 
+            cursor.execute(query)
 
     def update(self, table_name, query_data, filters=None):
         filter_string = self._obj_to_filters(filters)
@@ -61,8 +61,8 @@ class BaseDB(IBaseDB):
 
         return query
 
-        # with self.conn.cursor() as cursor: 
-        #     cursor.execute(query)
+        with self.conn.cursor() as cursor: 
+            cursor.execute(query)
     
     def delete(self, table_name, filters):
         filter_string = self._obj_to_filters(filters)
@@ -70,10 +70,5 @@ class BaseDB(IBaseDB):
         
         return query
 
-        # with self.conn.cursor() as cursor: 
-        #     cursor.execute(query)
-    
-
-
-
-
+        with self.conn.cursor() as cursor: 
+            cursor.execute(query)
